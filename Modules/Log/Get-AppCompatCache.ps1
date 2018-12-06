@@ -26,7 +26,7 @@ if (Test-Path ($AppCompatCacheParserPath)) {
     $suppress = & $AppCompatCacheParserPath --csv $AppCompatCacheParserOutputPath
 
     #Output the data.
-    Import-Csv -Delimiter "`t" "$AppCompatCacheParserOutputPath\*.tsv"
+    Import-Csv -Delimiter "`t" "$AppCompatCacheParserOutputPath\*.csv"
     
     #Delete the output folder.
     $suppress = Remove-Item $AppCompatCacheParserOutputPath -Force -Recurse
